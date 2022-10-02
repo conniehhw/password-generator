@@ -20,7 +20,7 @@ generateBtn.addEventListener("click", writePassword);
 // This runs the function - when press button "generate password", pop up questions
 function myFunction() { 
   let charLength = prompt("How many characters would you like your password to contain?");
-  if (charLength > 8 || charLength < 128) {
+  if (charLength >= 8 && charLength <=128) {
     let charNum = confirm("Do you want numbers for your password?");
       let charSpec = confirm("Do you want special characters in your password");
       let charUppLow = confirm("Do you want Upper and Lower case letters in your password"); 
