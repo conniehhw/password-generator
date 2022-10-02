@@ -18,17 +18,20 @@ generateBtn.addEventListener("click", writePassword);
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // This runs the function - when press button "generate password", pop up questions
-function myFunction() {
-  let charNum = confirm("Do you want numbers for your password?");
-  let charSpec = confirm("Do you want special characters in your password");
-  let charUppLow = confirm("Do you want Upper and Lower case letters in your password"); 
-  let charLength = prompt("How many characters do you want in your password?");
+function myFunction() { 
+  let charLength = prompt("How many characters would you like your password to contain?");
     if (charLength <8 || charLength > 128) {
       prompt("Please choose a number between 8 & 128");
-    } else {
-      alert(charNum);
+      let charNum = confirm("Do you want numbers for your password?");
+      let charSpec = confirm("Do you want special characters in your password");
+      let charUppLow = confirm("Do you want Upper and Lower case letters in your password"); 
     }
   }
+
+function generateRandomNum () {
+  return Math.floor(Math.random() * 99 ) + 10;
+}
+  console.log(generateRandomNum());
 
 
 function generateRandomLow () {
