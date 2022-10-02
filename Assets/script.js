@@ -20,7 +20,11 @@ generateBtn.addEventListener("click", writePassword);
 // This runs the function - when press button "generate password", pop up questions
 function myFunction() { 
   let charLength = prompt("How many characters would you like your password to contain?");
-    if (charLength <8 || charLength > 128) {
+  if (charLength > 8 || charLength < 128) {
+    let charNum = confirm("Do you want numbers for your password?");
+      let charSpec = confirm("Do you want special characters in your password");
+      let charUppLow = confirm("Do you want Upper and Lower case letters in your password"); 
+  } else {
       prompt("Please choose a number between 8 & 128");
       let charNum = confirm("Do you want numbers for your password?");
       let charSpec = confirm("Do you want special characters in your password");
@@ -33,38 +37,38 @@ function generateRandomNum () {
 }
   console.log(generateRandomNum());
 
-
 function generateRandomLow () {
   const charDefault = "abcdefghijklmnopqrstuvwxyz"
   return charDefault[Math.floor(Math.random() * charDefault.length)]
   } 
-  console.log(generateRandomLow());
+    console.log(generateRandomLow());
 
- //Number randomizer broken// 
-
-// Q2. Do you want special? function to execute a random spec if true
 function generateRandomSpec () {
   const specChar = "!@#$%^&*"
   return specChar[Math.floor(Math.random() * specChar.length)]
-}
-  console.log(generateRandomSpec());
-
-  if (charSpec = true) {
-    generateRandomSpec();
-    console.log();
-    //document.getElementById("demo").innerHTML = specLib;
-  } else {
-    /*document.getElementById("demo").innerHTML = charSpec;*/
-  console.log(charDefault);
   }
+    console.log(generateRandomSpec());
 
-
-  //Q3. Do you want Upper? function to execute 
 function generateRandomUpp () {
   const uppChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     return uppChar[Math.floor(Math.random() * uppChar.length)]
+  }
+  console.log(generateRandomUpp());
+
+  /*let charLength = prompt("How many characters would you like your password to contain?");
+  if (charLength <8 || charLength > 128) {
+    prompt("Please choose a number between 8 & 128");
+    let charNum = confirm("Do you want numbers for your password?");
+    let charSpec = confirm("Do you want special characters in your password");
+    let charUppLow = confirm("Do you want Upper and Lower case letters in your password"); */
+
+/*
+if (charNum = true) {
+  document.getElementById("demo").innerHTML = true
+} else {
+  /*document.getElementById("demo").innerHTML = charSpec;
+console.log(charDefault);
 }
-console.log(generateRandomUpp());
 
   if (charUpp = true) {
     generateRandomUpp();
