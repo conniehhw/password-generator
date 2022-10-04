@@ -63,41 +63,88 @@ function generateRandomLow () {
           return charDefault[Math.floor(Math.random() * charDefault.length)]
       } 
 
+var genPass = "";
+var frag1 = "";
+var frag2 = "";
+var frag3 = "";
+var frag4 = "";
 
 function myFunction () {
     counter = 0;
   var charLength = prompt("How many characters would you like your password to contain?");
   if (charLength >= 8 && charLength <=128) {
+    console.log(charLength);
 var charNum = confirm("Do you want numbers for your password?");
   if (charNum == true) {
       counter = counter + 1;
+      frag1 = generateRandomNum();
       document.getElementById("password").innerHTML = generateRandomNum();
-      console.log(generateRandomNum());
+      console.log(frag1);
+      console.log(counter);
       } else if (charNum == false) {
       document.getElementById("password").innerHTML = generateRandomLow();
-      console.log(generateRandomLow());
+      console.log(counter);
       }
-    }
 var charSpec = confirm("Do you want special characters in your password");
   if (charSpec == true) {
     counter = counter + 1;
-    document.getElementById("password").innerHTML = generateRandomSpec();
-    console.log(generateRandomSpec());
+    frag2 = generateRandomSpec() + generateRandomSpec();
+    //frag2 = frag2 + generateRandomSpec();
+    document.getElementById("password").innerHTML = (generateRandomSpec());
+    console.log(frag2);
+    console.log(counter);
   } else { 
     document.getElementById("password").innerHTML = generateRandomLow();
     console.log(generateRandomLow());
+    console.log(counter);
   }
 var charUpp = confirm("Do you want upper cases letters in your password?");
   if (charUpp == true) {
     counter = counter + 1;
-    document.getElementById("password").innerHTML = generateRandomUpp();
-    console.log(generateRandomUpp());
+    frag3 = generateRandomUpp() + generateRandomUpp();
+    //frag3 = frag3 + generateRandomUpp();
+    //document.getElementById("password").innerHTML = generateRandomUpp();
+    console.log(frag3);
+    console.log(counter);
       } else {
-      document.getElementById("password").innerHTML = "";
+      //document.getElementById("password").innerHTML = generateRandomLow();
       console.log(generateRandomLow());
   }
+  
+  var genLowNum = charLength - (counter*(2));
+
+var i = genLowNum //4
+for (var i = 0; i < genLowNum; i++) { // i++ = i + 1
+  // i = iniat starting pt; 0 < genLowNum; 0 + 1
+  frag4 = frag4 + generateRandomLow();
 }
 
+  genPass = frag1 + frag2 + frag3 + frag4;
+  document.getElementById("password").innerHTML = genPass;
+  console.log(genPass);
+
+  
+
+  /*var wrtPassword = concat(charNum, charSpec, charUpp);
+  console.log(wrtPassword);
+  
+  var i = charLowRandNum;
+  for (var i = 0; i < 8; i++) {
+    console.log("The number is " + i);
+  }*/
+
+  //var genPassword = charLength + charNum + charSpec + charUpp;
+  //console.log(genPassword);
+}
+}
+
+
+
+/*var charLength = charLength;
+console.log(charLength);
+
+var charLow = (charLength) - ((counter)*2)
+console.log(charLow);
 
 /*var i = 5; // i = password // password = frg 1 + frg 2 + frg 3 + frg 4 
 //frg 4 = generateRandomLow * (charLength)-((counter)*2)
@@ -255,7 +302,7 @@ if (confirm(charNum) == true, confirm(charSpec) == true, confirm(charUpp) == tru
 if (charNum = true) {
   document.getElementById("demo").innerHTML = true
 } else {
-  /*document.getElementById("demo").innerHTML = charSpec;
+document.getElementById("demo").innerHTML = charSpec;
 console.log(charDefault);
 }
 
@@ -281,4 +328,4 @@ console.log(passwordString); {
     document.getElementById("demo").innerHTML = alert("Thank you for your input");
        } else {prompt("Please choose a number between 8 & 128");
       }
-    */
+      */
