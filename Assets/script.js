@@ -19,24 +19,155 @@ generateBtn.addEventListener("click", writePassword);
 
 // This runs the function - when press button "generate password", pop up questions
 
-function myFunction() { 
-  let charLength = prompt("How many characters would you like your password to contain?");
+/*function generatePassword () {
+if (confirm(charNum === true)) {
+  counter = 0;
+  counter = counter + 1;
+  document.getElementById("password").innerHTML = generateRandomNum();
+} else {
+  document.getElementById("password").innerHTML = "";
+}
+
+if (confirm(charSpec) === true) {
+  counter = counter + 1;
+  document.getElementById("password").innerHTML = generateRandomSpec();
+} else { 
+  document.getElementById("password").innerHTML = "";
+}
+
+if (confirm(charUpp) === true) {
+  counter = counter + 1;
+  document.getElementById("password").innerHTML = generateRandomUpp();
+} else { 
+  document.getElementById("password").innerHTML = "";
+}
+}*/
+
+function generateRandomNum () {
+  return Math.floor(Math.random() * 99 ) + 10;
+  }
+
+function generateRandomSpec () {
+    const specChar = "!@#$%^&*"
+    return specChar[Math.floor(Math.random() * specChar.length)]
+    }
+      
+
+function generateRandomUpp () {
+    const uppChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+          return uppChar[Math.floor(Math.random() * uppChar.length)]
+    }
+
+function generateRandomLow () {
+    const charDefault = "abcdefghijklmnopqrstuvwxyz"
+          return charDefault[Math.floor(Math.random() * charDefault.length)]
+      } 
+
+
+function myFunction () {
+    counter = 0;
+  var charLength = prompt("How many characters would you like your password to contain?");
   if (charLength >= 8 && charLength <=128) {
-    let charNum = "Do you want numbers for your password?";
-    let charSpec = "Do you want special characters in your passoword?"
-    let charUpp = "Do you want upper cases letters in your password?"
-    if (confirm(charNum) == true, confirm(charSpec) == true, confirm(charUpp) == true) {
+var charNum = confirm("Do you want numbers for your password?");
+  if (charNum == true) {
+      counter = counter + 1;
+      document.getElementById("password").innerHTML = generateRandomNum();
+      console.log(generateRandomNum());
+      } else if (charNum == false) {
+      document.getElementById("password").innerHTML = generateRandomLow();
+      console.log(generateRandomLow());
+      }
+    }
+var charSpec = confirm("Do you want special characters in your password");
+  if (charSpec == true) {
+    counter = counter + 1;
+    document.getElementById("password").innerHTML = generateRandomSpec();
+    console.log(generateRandomSpec());
+  } else { 
+    document.getElementById("password").innerHTML = generateRandomLow();
+    console.log(generateRandomLow());
+  }
+var charUpp = confirm("Do you want upper cases letters in your password?");
+  if (charUpp == true) {
+    counter = counter + 1;
+    document.getElementById("password").innerHTML = generateRandomUpp();
+    console.log(generateRandomUpp());
+      } else {
+      document.getElementById("password").innerHTML = "";
+      console.log(generateRandomLow());
+  }
+}
+
+
+/*var i = 5; // i = password // password = frg 1 + frg 2 + frg 3 + frg 4 
+//frg 4 = generateRandomLow * (charLength)-((counter)*2)
+// output = generateRandom Low * ((14)-((3)*2) = 14 - 6 = 8
+// yes yes yes filler = 12#$AAbbbbbbbb = password
+
+for (var i = 0; i < 10; i++) {
+  //some code
+}
+
+//Here is 10
+
+function writePassword() {
+  document.getElementById("password").innerHTML = generateRandomNum() + generateRandomSpec() + generateRandomUpp();
+};*/
+
+/*function myFunction() { 
+  var charLength = prompt("How many characters would you like your password to contain?");
+  if (charLength >= 8 && charLength <=128) {
+    charNum = confirm("Do you want numbers for your password?");
+    charSpec = confirm("Do you want special characters in your passoword?");
+    charUpp = confirm("Do you want upper cases letters in your password?");
+  } else {  prompt("Please choose a number between 8 & 128");
+    charNum = confirm("Do you want numbers for your password?");
+    charSpec = confirm("Do you want special characters in your passoword?");
+    charUpp = confirm("Do you want upper cases letters in your password?");
+    }
+}
+
+function generateRandomNum () {
+  return Math.floor(Math.random() * 99 ) + 10;
+  } console.log(generateRandomNum());
+
+  function generateRandomLow () {
+    const charDefault = "abcdefghijklmnopqrstuvwxyz"
+    return charDefault[Math.floor(Math.random() * charDefault.length)]
+    } 
+      console.log(generateRandomLow());
+    
+    function generateRandomSpec () {
+    const specChar = "!@#$%^&*"
+    return specChar[Math.floor(Math.random() * specChar.length)]
+    }
+      console.log(generateRandomSpec());
+    
+    function generateRandomUpp () {
+    const uppChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      return uppChar[Math.floor(Math.random() * uppChar.length)]
+    }
+    console.log(generateRandomUpp());*/
+
+
+
+
+/*let charLength = i;
+for (let i = 0; i >= 8 && i <=128; i - counter(2)) {
+  document.getElementById("password").innerHTML = generateRandomLow() * charLength;
+}
+
+if (confirm(charNum) == true, confirm(charSpec) == true, confirm(charUpp) == true) {
         document.getElementById("password").innerHTML = generateRandomNum() + generateRandomSpec() + generateRandomUpp() + generateRandomLow();
     } else if (confirm(charNum) == false, confirm(charSpec) == true, confirm(charUpp) == true) {
       document.getElementById("password").innerHTML = generateRandomSpec() + generateRandomUpp + generateRandomLow();
 } else if (confirm(charNum) == false, confirm(charSpec) == false, confirm(charUpp) == true) {
       document.getElementById("password").innerHTML = + generateRandomUpp + generateRandomLow();
 } else (confirm(charNum) == false, confirm(charSpec) == false, confirm(charUpp) == false) 
-      document.getElementById("password").innerHTML = generateRandomLow();
+      document.getElementById("password").innerHTML = generateRandomLow()
       } else {document.getElementById("password").innerHTML = "nothing"}
 }
-  
-  
+  */
   
  /* if (confirm(charNum) == false, confirm(charSpec) == true, confirm(charUpp) == true) {
         document.getElementById("password").innerHTML = generateRandomSpec() + generateRandomUpp + generateRandomLow();
@@ -45,7 +176,7 @@ function myFunction() {
   } else (confirm(charNum) == false, confirm(charSpec) == false, confirm(charUpp) == false) 
         document.getElementById("password").innerHTML = generateRandomLow();
   } else {document.getElementById("password").innerHTML = "nothing"}
-}
+}*/
     
 
 
@@ -60,7 +191,7 @@ function myFunction() {
     } else {
     generateRandomLow();
     document.getElementById("demo").innerHTML = generateRandomLow();
-    }     
+    }  */   
   
 
 
@@ -107,46 +238,20 @@ function myFunction() {
 */
 
 
-  function generateRandomNum () {
-    return Math.floor(Math.random() * 99 ) + 10;
-    } console.log(generateRandomNum());
-
-  function generateRandomLow () {
-  const charDefault = "abcdefghijklmnopqrstuvwxyz"
-  return charDefault[Math.floor(Math.random() * charDefault.length)]
-  } 
-    console.log(generateRandomLow());
-
-function generateRandomSpec () {
-  const specChar = "!@#$%^&*"
-  return specChar[Math.floor(Math.random() * specChar.length)]
-  }
-    console.log(generateRandomSpec());
-
-function generateRandomUpp () {
-  const uppChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    return uppChar[Math.floor(Math.random() * uppChar.length)]
-  }
-  console.log(generateRandomUpp());
-
 /*let text = charNum;
   if (confirm(text) == true) {
       generateRandomNum();
       document.getElementById("demo").innerHTML = generateRandomNum();
   } else {generateRandomLow();
     document.getElementById("demo").innerHTML = generateRandomLow();
-  }*/
+  }
 
-  /*
   document.getElementById("demo").innerHTML = charNum;
 
     generateRandomNum();
     document.getElementById("demo").innerHTML = generateRandomNum();
-  
 
 
-
-/*
 if (charNum = true) {
   document.getElementById("demo").innerHTML = true
 } else {
@@ -161,7 +266,7 @@ console.log(charDefault);
     console.log(charDefault);
   }
   
-/*let z = 0;
+let z = 0;
 z = z + 1;
 z = z + 1;
 
