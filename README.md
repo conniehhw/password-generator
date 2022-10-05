@@ -17,9 +17,7 @@ Webpage consist of html, JavaScript and CSS.
 - Follow the prompts and enter criterias (example: 12 character length, okay to numbers, special characters, no upper case letters).
 - Copy password generated on the screen for reference
 
-```md
-![Screen shot of password generator](./Assets/Images/screen-shot-passwordgen.png)
-```
+![Screen shot of password generator](./Assets/Images/screen-shot-passwordgen.png "Screen shot")
 
 ## Credits
 Reference and sources from w3schools.com, developer.mozilla.org
