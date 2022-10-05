@@ -1,7 +1,3 @@
-Password Generator 
-
-// Don't forget to add screen shot and link this time //
-
 # Password Generator
 
 ## Password Generator for Security
@@ -22,7 +18,7 @@ Webpage consist of html, JavaScript and CSS.
 - Copy password generated on the screen for reference
 
 ```md
-![Screen shot of password generator](Assets/Images/Screen Shot Password Generator.png)
+![Screen shot of password generator](./Assets/Images/Screen%20Shot%20Password%20Generator.png)
 ```
 
 ## Credits
