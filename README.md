@@ -18,7 +18,7 @@ Webpage consist of html, JavaScript and CSS.
 - Copy password generated on the screen for reference
 
 ```md
-![Screen shot of password generator](./Assets/Images/Screen%20Shot%20Password%20Generator.png)
+![Screen shot of password generator](./Assets/Images/screen-shot-passwordgen.png)
 ```
 
 ## Credits
